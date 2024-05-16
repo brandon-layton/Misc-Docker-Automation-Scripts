@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd /home/cube
+docker compose pull
+sleep 10
+
+docker compose down
+sleep 10
+
+docker compose up -d
+

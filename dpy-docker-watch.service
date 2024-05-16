@@ -1,0 +1,8 @@
+[Unit]
+Description=Watch for changes to NotRay discord bot and apply them when found
+
+[Service]
+ExecStart=/usr/local/bin/dpy-docker-watch
+
+[Install]
+WantedBy=multi-user.target

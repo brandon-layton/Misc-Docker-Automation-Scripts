@@ -1,0 +1,9 @@
+#! /bin/bash
+
+cd /home/cube/dpy-docker
+
+inotifywait -m -r -e modify,create --include '.py$' ./tmp
+
+while inotifywait --recursive --format "%e %w%f" --event modify,create --include '.py$' ./NotRay;
+	do docker compose up -d --build; 
+done
